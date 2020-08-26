@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!--namespace 指定dao-->
+<mapper namespace="org.zjp.spring.dao.UserMapper">
+    <!--id 表示dao层的方法名 parameterType参数类型 resultType返回结果 #{name}表示参数取请求参数中的name作为value-->
+    <select id="getUser" parameterType="String" resultType="org.zjp.spring.bean.UserBean">
+        SELECT * FROM user WHERE name = #{name} AND password = #{password}
+    </select>
+
+</mapper>
